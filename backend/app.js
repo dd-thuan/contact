@@ -30,11 +30,11 @@ app.use("/api/v1/", payment);
 app.use("/api/v1/", category);
 
 
-app.use(express.static(path.join(__dirname, "../frontend/build")));
+// app.use(express.static(path.join(__dirname, "../frontend/build")));
 
-app.get("*", (req, res) => {
-  res.sendFile(path.resolve(__dirname, "../frontend/build/index.html"));
-})
+// app.get("*", (req, res) => {
+//   res.sendFile(path.resolve(__dirname, "../frontend/build/index.html"));
+// })
 
 // Middleware for errors
 app.use(errorMiddleware);
