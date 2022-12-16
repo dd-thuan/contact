@@ -11,6 +11,18 @@ exports.contact = async (req, res, next) => {
     \n My message is ${message}.`;
 
     await sendContact(userMessage);
+    if (
+      name === "" ||
+      email === "" ||
+      phone === "" ||
+      subject === "" ||
+      message === ""
+    ) {
+      return res.status(400).json({
+        success: false,
+        message: "Please fill all fields",
+      });
+    }
 
     return res.status(200).json({
       success: true,
