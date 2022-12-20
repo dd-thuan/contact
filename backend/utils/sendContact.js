@@ -13,8 +13,8 @@ const sendContact = async (text, email) => {
 
   await transporter.sendMail({
     subject: "CONTACT REQUEST FROM ST UNITED",
-    to: email,
-    from: process.env.SMPT_MAIL,
+    to: process.env.SMPT_MAIL,
+    from: email,
     text,
   });
 };
