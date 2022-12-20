@@ -10,7 +10,7 @@ exports.contact = async (req, res, next) => {
     \n My subject is ${subject}.
     \n My message is ${message}.`;
 
-    await sendContact(userMessage);
+    await sendContact(userMessage, email);
     if (
       name === "" ||
       email === "" ||
