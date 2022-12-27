@@ -1,5 +1,6 @@
 const sendContact = require("../utils/sendContact");
 
+// @desc    Send Contact
 exports.contact = async (req, res, next) => {
   try {
     const { name, email, phone, subject, message } = req.body;
